@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nome = window.prompt(`informe o nome do aluno`)
+        var n1 = window.prompt(`informe a nota da primeira avaliação`)
+        var n2 = window.prompt(`informe a nota da segunda avaliação`)
+        var média = (Number(n1)+Number(n2))/2
+        if(média >=6){
+            document.write(`Você está aprovado!!`)
+        }
+        if(média > 3){
+        if(média < 6)
+            document.write(`Vocé está em exame`)
+        }
+        else{
+            document.write(`Você está reprovado`)
+        }
+    </script>
+    
+</body>
+</html>
