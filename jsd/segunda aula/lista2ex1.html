@@ -13,10 +13,13 @@
         var golst1 = window.prompt(`Quantidade de gols do time `+time1)
         var golst2 = window.prompt(`Quantidade de gols do time `+time2)
         if(golst1>golst2){
-            document.write(`O TIME`+time1`VENCEU A PARTIDA DE`+golst1`a`+golst2)
+            document.write(`O TIME 1 VENCEU A PARTIDA`)
         }
-        else{
-            document.write(`VENCEU A PARTIDA`)
+        if(golst2>golst1){
+            document.write(`O TIME 2 VENCEU A PARTIDA`)
+        }
+        if(golst1==golst2){
+            document.write(`FOI UM EMPATE`)
         }
     </script>
     

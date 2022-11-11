@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var idade = window.prompt(`Informe a sua idade`) 
+        var peso = window.prompt(`Informe o seu peso`)
+
+        if(idade<=12){
+            document.write(`SUA CATEGORIA É INFANTIL`)
+        }
+        else if(idade>=13 && idade<=16 && peso<=40){
+            document.write(`JUVENIL LEVE`)
+        }
+        else if(idade>=13 && idade<=16 && peso>=40 && peso<=45){
+            document.write(`JUVENIL PESADO`)
+        }
+        else if(idade>=17 && idade<=24 && peso<=45){
+            document.write(`SENIOR LEVE`)
+        }
+        else if(idade>=17 && idade<=24 && peso>=45 && peso<=60){
+            document.write(`SENIOR MÉDIO`)
+        }
+        else if(idade>=17 && idade<=24 && peso<60){
+            document.write(`SENIOR PESADO`)
+        }
+        else if(idade>24){
+            document.write(`VETERANO`)
+        }
+        
+    </script>
+    
+</body>
+</html>

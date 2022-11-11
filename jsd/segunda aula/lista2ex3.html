@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var nota1 = window.prompt(`Informe a primeira nota`)
+        var nota2 = window.prompt(`Informe a segunda nota`)
+        var nota3 = window.prompt(`Informe a terceira nota`)
+        var mediaex = window.prompt(`Informe a média dos exercicios`)
+        nota1 = Number(nota1)
+        nota2 = Number(nota2)
+        nota3 = Number(nota3)
+        mediaex = Number(mediaex)
+        var aproveitamento = ((nota1+nota2)*2+(nota3)*3+(mediaex))/7
+        if(aproveitamento>=9.0){
+            document.write(`NOTA A`)
+        }
+        if(aproveitamento>=7.5 && aproveitamento<9.0 ){
+            document.write(`NOTA B`)
+        }
+        if(aproveitamento>=6.0 && aproveitamento<7.5){
+            document.write(`NOTA C`)
+        }
+        if(aproveitamento<6.0){
+            document.write(`NOTA D`)
+        }
+
+    </script>
+    
+</body>
+</html>
