@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #resultado{
+        border: solid 2px rgb(0, 255, 217);
+        
+
+    }
+    body{
+        font-style: italic;
+    }
+</style>
+<body>
+    <div>
+
+       <p>Digite um número <input type="number" name="numero" id="numero"> <input type="button" 
+        value="Calcular" onclick="calcular()">
+    </p>
+
+    </div>
+    <div id="resultado">
+
+        Calculando...
+
+    </div>
+    <script>
+
+function calcular(){
+    var num = document.getElementById(`numero`)
+    var result = document.getElementById(`resultado`)
+    if(num.value<=0){
+        window.alert(`--[ERRO]-- Digite um número maior que ZERO`)
+    }
+    else{
+        result.innerHTML=` `
+        num=Number(num.value)
+        for(var cont=1;cont<=num;cont++)
+        result.innerHTML+= (`<strong> ${cont}<strong>`)
+
+    }
+
+}
+    </script>
+    
+</body>
+</html>

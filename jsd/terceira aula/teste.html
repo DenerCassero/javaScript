@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Iniciando estudos DOM</h1>
+    <p id="paragrafo_destaque">aqui vai o resultado</p>
+    <p>aprendendo a usar o <b>DOM</b> em JavaScript</p>
+    <div>CLIQUE EM MIM</div>
+    <script>
+
+        /** innerText = copia o somente o texto da tag**/
+        /** innerHTML = copia toda a tag com a formatação junto**/
+        var p1 = document.getElementById(`paragrafo_destaque`)
+        document.write(p1.innerHTML)
+        p1.innerHTML=`<b>Olá mundo<b>`
+        p1.style.color=`red`
+        var body = document.body
+        body.style
+
+    </script>
+    
+</body>
+</html>

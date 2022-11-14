@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body> 
+<header>
+
+    <h1>Tabuada</h1>
+
+</header>
+<div id="div1">
+    
+    <!--função onclick do js-->
+    <p>Tabuada do </p>
+    <input type="number" name="num" id="num" onclick="troca()">
+    <input type="button" type="button" value="calculo" onclick="calculo()">
+
+</div>
+<div id="res">
+
+Calculando, Aguarde...
+
+</div>
+<script>
+
+function calculo(){
+    var num = document.getElementById(`num`)
+    var res = document.getElementById(`res`)
+
+    var result
+    //length = tamanho//
+    if(num.value.length==0){
+        window.alert(`[ERRO] Digite um número`)
+    }
+    else{
+        num=Number(num.value)
+        res.innerHTML=' ' //zerando o resultado da tabauda antes de gerar uma nova//
+        for(var c=1;c<=10;c++){
+        result=c*num
+        res.innerHTML+=(`${c} x ${num} = ${result} <br>`)
+    }
+
+}
+
+}
+
+
+</script>
+    
+    
+</body>
+</html>
