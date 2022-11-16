@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!--As maçãs custam R$ 0,30 se forem compradas menos do que uma dúzia, e R$
+0,25 se forem compradas pelo menos doze. Escreva um algoritmo que leia o número
+de maçãs compradas, calcule e escreva o valor total da compra.-->
+<style>
+    *{
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        font-size: 20px;
+    }
+    #resposta{
+        border: solid 1px;
+        margin-top: 1%;
+    }
+</style>
+<body>
+    <div><p>Informe o número de maçãs que deseja comprar</p>
+        <input type="number" value="maçãs" id="quant">
+        <input type="button" value="comprar" onclick="comprar()">
+    </div>
+    <div id="resposta">
+        ...
+    </div>
+    <script>
+        function comprar(){
+            var quant = document.getElementById(`quant`)
+            var resposta = document.getElementById(`resposta`)
+            quant = Number(quant.value)
+            if(quant<12){
+                var total=quant*0.30
+                resposta.innerHTML = (`Você comprou ${quant}, maçãs, o total da compra foi de R$ ${total}`)
+            }
+            else{
+                total=quant*0.25
+                resposta.innerHTML = (`Você comprou ${quant}, maçãs, o total da compra foi de R$ ${total}`)
+            }
+        }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: aquamarine;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        display: flex;
+        justify-content: center;
+        gap: 5%;
+    }
+    #resposta{
+        border: solid 2px;
+        border-radius: 10px;
+        padding: 10px;
+        margin-top: 2%;
+        width: 300px;
+    }
+</style>
+<body>
+    <div>
+        <p>Informe o seu ano de nascimento</p>
+        <input type="number" name="anonasc" id="anonasc">
+        <input type="button" value="conferir" onclick="conferir()">
+    </div>
+    <div id="resposta">
+        Aguardando...
+    </div>
+    <script>
+        function conferir(){
+            var ano = document.getElementById(`anonasc`)
+            var resposta = document.getElementById(`resposta`)
+            ano = Number(ano.value)/**convertendo o valor do input para números**/
+            var idade = 2022 - ano
+            if(idade>=16){
+            resposta.innerHTML = (`Sua idade é ${idade}, você pode votar!`)
+        }
+        else{
+           resposta.innerHTML = (`Sua idade é ${idade}, você ainda não pode votar.`)
+        }
+    }
+
+    </script>
+    
+</body>
+</html>
