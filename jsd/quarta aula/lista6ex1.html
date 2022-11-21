@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 30px;
+        }
+        #sec1{
+            display: flex;
+            gap: 2%;
+        }
+        #partida{
+            padding: 1%;
+        }
+        #placar{
+            margin-top: 3%;
+        }
+        
+    </style>
+</head>
+<body>
+    <section id="sec1">
+    <div id="times">
+       <p>INFORME O TIMES QUE IRÃO JOGAR:</p> 
+       <p>TIME 1</p>
+        <input type="text" name="time 1" id="time1">
+        <p>TIME 2<p>
+        <input type="text" name="time 2" id="time2">
+    </div>
+    <div id="gols">
+        <p>INFORME A QUANTIDADE DE GOLS DE CADA TIME</p>
+        <p>GOLS TIME 1</p>
+        <input type="number" id="golst1">
+        <p>GOLS TIME 2</p>
+        <input type="number" id="golst2">
+    </div>
+</section>
+    <div id="botão">
+        <input type="button" value="PARTIDA" id="partida" onclick="partida()">
+    </div>
+    <div id="placar">
+        ...
+    </div>
+    
+    
+    <script>
+        function partida(){
+            time1 = document.getElementById(`time1`)
+            time2 = document.getElementById(`time2`)
+            golst1 = document.getElementById(`golst1`)
+            golst2 = document.getElementById(`golst2`)
+            var time1 = (time1.value)
+            var time2 = (time2.value)
+            var golst1 = Number(golst1.value)
+            var golst2 = Number(golst2.value)
+            if(golst1>golst2){
+                placar.innerHTML=(`O TIME ${time1} VENCEU DE ${golst1} X ${golst2} EM CIMA DO ${time2}`)
+            }
+            if(golst2>golst1){
+                placar.innerHTML=(`O TIME ${time2} VENCEU DE ${golst2} X ${golst1} EM CIMA DO ${time1}`)
+            }
+            if(golst1==golst2){
+                placar.innerHTML=(`EMPATE`)
+            }
+        }
+    </script>
+</body>
+</html>

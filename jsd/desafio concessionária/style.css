@@ -1,0 +1,21 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-size: 20px;
+}
+#infoveiculo{
+    margin: 4%;
+    display: flex;
+    justify-content: space-evenly;
+}
+header{
+    display: flex;
+    align-items: center;
+    font-size: 30px;
+    border-bottom: solid 2px;
+}
+#resultado{
+    margin: 4%;
+    display: flex;
+    justify-content: space-evenly;
+}

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Desafio concessionária</title>
+</head>
+<body>
+    <header>
+        <img src="img/Corvette-logo-2014-1024x768.webp" alt="" width="300" height="150">
+        FUNCIONA PELO AMOR DE DEUS
+    </header>
+    
+    <div id="infoveiculo">
+        <p>Informe o veículo desejado
+            <input type="text" id="veiculo">
+        </p>
+        <p>Preço do veículo
+            <input type="number" id="precoveiculo">
+        </p>
+        <p>Percentual de entrada
+            <input type="number"  id="entrada">
+        </p>
+        <p>Número de parcelas 
+            <input type="number"  id="parcelas"></p>
+        
+        <input type="button" value="calcular" id="CALCULAR" onclick="compra()">
+    </div>
+    <div id="resultado">
+        <p>Valor da entrada 
+            <input type="number" id="valentrada">
+        </p>
+        <p>Valor restante
+            <input type="number" id="valrestante">
+        </p>
+        <p>Quantidade de parcelas
+            <input type="number" id="quantparcelas">
+        </p>
+        <p>Valor de cada parcelas
+            <input type="number" id="valparcelas">
+        </p>
+    </div>
+    <!--
+        conta entrada
+        (precoveiculo*entrada)/100-->
+<script>
+    function compra(){
+        var preco = document.getElementById(`precoveiculo`)
+        var entrada = document.getElementById(`entrada`)
+        var parcelas = document.getElementById(`parcelas`)
+        var valentrada = document.getElementById(`valentrada`)
+        var valrestante = document.getElementById(`valrestante`)
+        var quantparcelas = document.getElementById(`quantparcelas`)
+        var valparcelas = document.getElementById(`valparcelas`) 
+        var teste = document.getElementById(`teste`)
+        var teste1 = document.getElementById(`teste1`)
+
+        preco=Number(preco.value)
+        entrada=Number(entrada.value)
+        parcelas=Number(parcelas.value)
+
+        if(entrada>=30 || entrada<=90){
+             var resvalentrada = preco*(entrada/100)
+             valentrada.value=Number(resvalentrada)  
+        }
+        else{
+            window.alert(`No mínimo uma entrada de 30% e no máximo 90% `)
+        }
+        if(precoveiculo==0){
+            window.alert(`insira um preço válido`)
+        }
+        else{
+            var resprecoveiculo = Number(precoveiculo-resvalentrada)
+            valrestante.value=(resvalentrada)
+        }
+        if(parcelas<3 || parcelas>24){
+            window.alert(`no mínimo 3 parcelas e no máximo 24`)
+        }
+        else{
+            quantparcelas.value=(parcelas)
+            
+        }
+        if(entrada==0){
+            window.alert(`insira um entrada válida`)
+            
+        }
+    }
+</script>
+   
+</html>

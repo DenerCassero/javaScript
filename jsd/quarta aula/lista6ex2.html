@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <p>Informe o numero de lados do poligono <input type="number" name="lados" id="lados"></p>
+        <p>Informe a medida dos lados <input type="number" name="medida" id="medida"></p>
+        <p><input type="button" value="Calcular" onclick="calcular()"></p>
+    </div>
+    <div id="resposta">
+Calculando, aguarde....
+    </div>
+    <script>
+        function calcular(){
+            var lados = document.getElementById(`lados`)
+            var medida = document.getElementById(`medida`)
+            var resposta = document.getElementById(`resposta`)
+            var perimetro = (lados*3)
+            var area = (medida*medida)
+            lados=Number(lados.value)
+            medida=Number(medida.value)
+            if(lados==3){
+                resposta.innerHTML=(`é um triângulo com o perimetro de ${perimetro}`)
+            }
+            else if(lados==4){
+                resposta.innerHTML=(`é um quadrado com a area de ${area}`)
+            }
+            else if(lados==5){
+                resposta.innerHTML=(`é um pentagono`)
+            }
+        }
+    </script>
+    
+</body>
+</html>
